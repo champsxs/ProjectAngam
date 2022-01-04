@@ -1,0 +1,30 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+
+<h4>Welcome to Project {{ project }}</h4>
+<img src="{{ project.featured_image.url }}" class="img-fluid" alt="Responsive image">
+<p>Description: {{ project.description }}</p>
+<p>Owner: {{ project.owner }}</p>
+<h5>Tags found</h5>
+{% for tag in project.tags.all %}
+    <span class="badge badge-info">{{ tag }}</span>
+{% endfor %}
+
+<div class="card-body">
+    {% for review in project.review_set.all %}
+    <i class="fas fa-book mr-1"></i>
+    <p>{{ review.body }}</p>
+    <div >
+      {% if 'up' in review.value %}
+      <span class="badge badge-success "><i class="far fa-thumbs-up"></i></span>
+      {% endif %}
+      {% if 'down' in review.value %}
+      <span class="badge badge-danger"><i class="far fa-thumbs-down"></i></span>
+      {% endif %}
+      <span class="badge badge-info"><i class="far fa-edit"></i>{{ review.created }}</span>
+    </div>
+    <hr>
+    {% endfor %}
+  </div>
+{% endblock content %}

@@ -1,0 +1,11 @@
+tusManager: checking 
+2022-01-04 23:49:01.1064 INFO CustomManagerClientBase`1 Calling service.channel 
+2022-01-04 23:49:01.1064 INFO ServiceChannelStatusClient ServiceChannelStatusManager: checking 
+2022-01-04 23:49:11.1071 INFO CustomManagerClientBase`1 Calling service.channel 
+2022-01-04 23:49:11.1201 INFO ServiceChannelStatusClient ServiceChannelStatusManager: checking 
+2022-01-04 23:49:21.1062 INFO CustomManagerClientBase`1 Calling service.channel 
+2022-01-04 23:49:21.1062 INFO ServiceChannelStatusClient ServiceChannelStatusManager: checking 
+2022-01-04 23:49:31.1201 INFO CustomManagerClientBase`1 Calling service.channel 
+2022-01-04 23:49:31.1201 INFO ServiceChannelStatusClient ServiceChannelStatusManager: checking 
+2022-01-04 23:49:41.1230 INFO CustomManagerClientBase`1 Calling service.channel 
+2022-01-04 23:49:41.1230 INFO ServiceChannelStatusClient ServiceChannelStatusManager: chec

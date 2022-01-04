@@ -1,0 +1,38 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-group">
+      {% for field in form %}
+      {%  if 'checkbox' == field.field.widget.input_type %}
+      <p></p>
+      <label for="project">Tags</label>
+      {% for choice_id, choice_label in field.field.choices %}
+      <div class="form-check">
+        <input class=" form-check-input" type="checkbox">
+        <label for="project">{{ choice_label }}</label>
+      </div>
+      {% endfor %}
+      <p></p>
+      {% else %}
+      <label for="project">{{ field.label }}</label>
+      {{ field }}
+      {% endif %}
+      {% endfor %}
+      <p></p>
+      <button type="submit" class="btn btn-primary">Update</button>
+    </div>
+  </form>
+
+<!-- <form>
+  <div class="form-group">
+    <h1>Project Form</h1>
+      <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p}}
+        <input type="submit">
+      </form>
+  </div> -->
+{%endblock content %}

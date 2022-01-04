@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/svg" href="{% static 'favicon.svg' %}"/>
+  <title>Angam</title>
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" >
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="{% static 'assert/plugins/fontawesome-free/css/all.min.css' %}" type="text/css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="{% static 'assert/plugins/icheck-bootstrap/icheck-bootstrap.min.css' %}" type="text/css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{% static 'assert/css/adminlte.min.css' %}" type="text/css">
+</head>
+<body class="hold-transition sidebar-mini sidebar-collapse ">
+<div class="wrapper">
+
+  <!-- Preloader -->
+  <!-- <div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__shake" src="{% static 'assert/img/logo.svg' %}" alt="Angam" height="60" width="60">
+  </div> -->
+
+  <!-- Navbar -->
+  {% include 'includes/navbar.html' %}
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  {% include 'includes/sidebar.html' %}
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <section class="content-header">
+        <div class="container-fluid">
+          <div class="float-sm-right">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="#">Layout</a></li>
+              <li class="breadcrumb-item active">Fixed Layout</li>
+            </ol>
+          </div>
+        </div><!-- /.container-fluid -->
+    </section>
+      <section class="content">
+    {% block content %}    {% endblock content %}
+    </section>
+  </div>
+  <!-- /.content-wrapper -->
+  <!-- Site Footer-->
+  {% include 'includes/footer.html' %}
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="{% static 'assert/plugins/jquery/jquery.min.js' %}"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="{% static 'assert/plugins/jquery-ui/jquery-ui.min.js' %}"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<!-- <script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script> -->
+<!-- Bootstrap 4 -->
+<script src="{% static 'assert/plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'assert/js/adminlte.js' %}"></script> 
+
+</body>
+</html>
